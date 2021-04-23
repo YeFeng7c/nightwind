@@ -27,6 +27,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
+body{
+	 background-color: #E2E7E1;
+}
 .foot{
 	text-align: center;
 }

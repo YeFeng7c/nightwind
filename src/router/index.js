@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VueRouter from 'vue-router';
-import H from '../components/H.vue'
 
 Vue.use(VueRouter);
 Vue.use(Router)
@@ -18,32 +17,37 @@ Router.prototype.replace = function replace (location) {
 
 export default new Router({
   routes: [
-	
+ 	 	{
+			path: '/Regist',
+			name: 'Regist',
+			component: ()=>import('@/components/Regist')
+		 },
+		 {
+		 	path: '/Login',
+		 	name: 'Login',
+		 	component: ()=>import('@/components/Login')
+		  },
      {
-          path: '/',
-          component: ()=>import('@/components/Index'),
-          children:[
-            {
-              path: '/',
-              name: 'Home',
-              component: ()=>import('@/components/Home')
-            },
-            {
-              path: '/Message',
-              name: 'Message',
-               component: ()=>import('@/components/Message')
-            },
-            {
-              path: '/About',
-              name: 'About',
-               component: ()=>import('@/components/About')
-            },
-			{
-					  path:'/H',
-					  name:'H',
-					  component:H
-			},
-            ],
-            }
+			path: '/',
+			component: ()=>import('@/components/Index'),
+			children:[
+				{
+					path: '/',
+					name: 'Home',
+					component: ()=>import('@/components/Home')
+				},
+				{
+					path: '/Message',
+					name: 'Message',
+					 component: ()=>import('@/components/Message')
+				},
+				{
+					path: '/About',
+					name: 'About',
+					 component: ()=>import('@/components/About')
+				},
+				
+				],
+			}
   ]
 })

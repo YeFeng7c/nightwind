@@ -16,6 +16,7 @@
 				<el-menu-item index="/" @click="goTo('/')">首页</el-menu-item>
 				<el-menu-item index="/Message" @click="goTo('/Message')">留言</el-menu-item>
 				<el-menu-item index="/About" @click="goTo('/About')">关于</el-menu-item>
+				<el-menu-item index="/Regist" @click="goTo('/Regist')">成为会员</el-menu-item>
 				<el-menu-item><a href="/sg/sg.html" target="_blank">看你骨骼惊奇，来算一卦</a></el-menu-item>
 				</el-menu>
 			</div>

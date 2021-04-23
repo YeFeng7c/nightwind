@@ -9,9 +9,7 @@ import router from './router'
 
 Vue.use(VueResource)
 Vue.use(ElementUI)
-
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
