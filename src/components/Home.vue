@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script>
+<script >
   export default {
     data() {
       return {
@@ -18,9 +18,9 @@
   }
 </script>
 
-<style>
+<style scoped>
 .hello{
-	margin-top: 15%;
+	margin-top: 20%;
 	text-align: center;
 	font-size: 32px;
 	font-weight: bold;

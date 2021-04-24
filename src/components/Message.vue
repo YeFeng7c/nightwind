@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all-sty">
 	  <div>&nbsp;</div>
 	  <div>&nbsp;</div>
       <div class="mid">
@@ -11,7 +11,7 @@
       <el-button type="primary" @click="submit();">留言</el-button>
     </div>
     <div class="down">
-      <el-table :data="list" height="250">
+      <el-table :data="list" height="300">
         <el-table-column prop="message_name" label="名字" width="100">
         </el-table-column>
         <el-table-column prop="message_info" label="内容" >
@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<script>
+<script >
   export default {
     data() {
       return {
@@ -69,7 +69,12 @@
   }
 </script>
 
-<style>
+<style scoped>
+
+  .all-sty{
+    /* background-color: orange; */
+
+  }
 
 	.tips{
 		font-size: 22px;
@@ -83,7 +88,7 @@
     height: 30px;
     color: wheat;
     border: none;
-    background-color: orange;
+    /* background-color: orange; */
   }
   .el-input {
     /* position: absolute; */
@@ -108,17 +113,17 @@
   .mid {
 	/* position: absolute; */
     /* background-color: red; */
-	   height: 300px;
+	  height: 300px;
 		width: 600px;
 		margin-top: 100px;
-		margin-left: 20%;
+		margin-left: 30%;
     /* margin: 30% 20% 30% 30%; */
   }
 
   .down{
 	 /* position: absolute; */
     width: 700px;
-    margin: 20px 20% 20px 20%;
+    margin: 20px 20% 20px 30%;
   }
   h3{
 	  margin-left: 15%;

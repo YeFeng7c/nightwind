@@ -20,18 +20,18 @@
 	}
 </script>
 
-<style>
+<style scoped>
 
 .login{
 	/* background-color: red; */
 	width: 600px;
 	position: absolute;
 	left: 50%;
-	top:30%;
+	top:40%;
 	transform: translate(-50%,-50%);
 }
 .tital{
-	font-size: 22px;
+	font-size: 28px;
 	font-family: 微软雅黑;
 	font-weight: bold;
 	color: #FFFFFF;

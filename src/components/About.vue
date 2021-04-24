@@ -14,7 +14,7 @@
 	</div>
 </template>
 
-<script>
+<script >
 	export default {
 		data() {
 			return {
@@ -55,14 +55,14 @@
 			// 	const beforeMinutes = getTimedata.split(":")[1];
 			// 	const beforeSeconds = getTimedata.split(":")[2];
 			// 	const myDate = new Date();
-			// 	myDate.getFullYear(); //获取完整的年份(4位,1970-????)  
-			// 	myDate.getMonth(); //获取当前月份(0-11,0代表1月)      
-			// 	myDate.getDate(); //获取当前日(1-31)  
-			// 	myDate.getHours(); //获取当前小时数(0-23)  
-			// 	myDate.getMinutes(); //获取当前分钟数(0-59)  
-			// 	myDate.getSeconds(); //获取当前秒数(0-59)  
+			// 	myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+			// 	myDate.getMonth(); //获取当前月份(0-11,0代表1月)
+			// 	myDate.getDate(); //获取当前日(1-31)
+			// 	myDate.getHours(); //获取当前小时数(0-23)
+			// 	myDate.getMinutes(); //获取当前分钟数(0-59)
+			// 	myDate.getSeconds(); //获取当前秒数(0-59)
 
-			// 	// 计算差值  
+			// 	// 计算差值
 			// 	const getDifference = (myDate.getFullYear() - beforeYear) * 365 * 24 * 60 * 60 +
 			// 		(myDate.getMonth() - beforeMonth + 1) * 30 * 24 * 60 * 60 +
 			// 		(myDate.getDate() - beforeDate) * 24 * 60 * 60 +
@@ -138,10 +138,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.aa {
 		/* background-color: red; */
-		margin-top: 15%;
+		margin-top: 20%;
 		text-align: center;
 	}
 
@@ -159,9 +159,9 @@
 	}
 	.runTime{
 		font-family: 楷体;
-	    background-color: red; 
+	    background-color: red;
 		/* float: right; */
-		
+
 		/* margin-top: 30px; */
 	}
 </style>

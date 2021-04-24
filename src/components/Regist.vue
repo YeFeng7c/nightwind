@@ -1,20 +1,22 @@
 <template>
 	<div>
-		<div class="login">
-			<p class="tital">Welcome to NightWind</p>
-			<p><el-input placeholder="请输入姓名" v-model="form.username" clearable class="name"></el-input></p>
-			<p><el-input placeholder="请输入邮箱" v-model="form.email" clearable class="email"></el-input></p>
+		<div class="a-login">
+			<p class="a-tital">Welcome to NightWind</p>
+      <p><el-input placeholder="请输入姓名" v-model="form.username" clearable class="a-name"></el-input></p>
+			<p><el-input placeholder="请输入邮箱" v-model="form.email" clearable class="a-email"></el-input></p>
 			<p>
-				<el-input placeholder="请输入验证码" v-model="form.code" clearable class="code"></el-input>
-				<el-button type="info" class="sendCode" @click="sendCode();">发送验证码</el-button>
+				<el-input placeholder="请输入验证码" v-model="form.code" clearable class="a-code"></el-input>
+				<el-button type="info" class="a-sendCode" @click="sendCode();">发送验证码</el-button>
 			</p>
-			<p><el-input placeholder="请输入密码" v-model="form.password" show-password class="password"></el-input></p>
-			<el-button type="primary" round class="regist" @click="regist();">注册</el-button>
+			<p><el-input placeholder="请输入密码" v-model="form.password" show-password class="a-password"></el-input></p>
+			<el-button type="primary" round class="a-regist" @click="regist();">注册</el-button>
+      <router-link :to="{ path: '/Login' }"><el-link :underline="false" class="registlink">已有账号?立即登录</el-link></router-link>
+      <p class="smallTip">*因涉及到用户隐私问题，所以暂时用QQ邮箱进行注册</p>
 		</div>
 	</div>
 </template>
 
-<script>
+<script scoped>
 	export default {
 		data() {
 			return {
@@ -58,54 +60,61 @@
 						alert(res.body.message)
 					}
 				}, res => {
-					
+
 				});
 			}
 		}
 	}
 </script>
 
-<style>
-.tital{
-	font-size: 22px;
+<style scoped>
+.a-tital{
+	font-size: 28px;
 	font-family: 微软雅黑;
 	font-weight: bold;
 	color: #FFFFFF;
 	text-align: center;
 }
-.login{
+.a-login{
 	/* background-color: red; */
 	width: 600px;
 	position: absolute;
 	left: 50%;
-	top:30%;
+	top:40%;
 	transform: translate(-50%,-50%);
 }
-.code{
+.a-code{
 	/* position: fixed; */
 	/* display: inline; */
 	margin-left: 150px;
 	width: 200px;
 }
-.sendCode{
+.a-sendCode{
 	/* display: inline; */
-	
+
 	width: 100px;
 }
-.regist{
+.a-regist{
 	width: 140px;
 	margin-left: 230px;
 }
-.name{
+.a-name{
 	margin-left: 150px;
 	width: 300px;
 }
-.email{
+.a-email{
 	margin-left: 150px;
 	width: 300px;
 }
-.password{
+.a-password{
 	margin-left: 150px;
 	width: 300px;
+}
+.smallTip{
+  text-align: center;
+}
+.registlink{
+	float: right;
+	margin-top: 14px;
 }
 </style>
