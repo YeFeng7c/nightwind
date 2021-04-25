@@ -2,9 +2,9 @@
 	<div>
 		<div class="login">
 			<p class="tital">Welcome to NightWind</p>
-			<p><el-input placeholder="请输入邮箱" v-model="input" clearable class="loemail"></el-input></p>
-			<p><el-input placeholder="请输入密码" v-model="input" show-password class="lopwd"></el-input></p>
-			<el-button type="primary" round class="regist">登录</el-button>
+			<p><el-input placeholder="请输入邮箱" v-model="form.email" clearable class="loemail"></el-input></p>
+			<p><el-input placeholder="请输入密码" v-model="form.password" show-password class="lopwd"></el-input></p>
+			<el-button type="primary" round class="regist" @click="login();">登录</el-button>
 			<router-link :to="{ path: '/Regist' }"><el-link :underline="false" class="registlink">没有账号?立即注册</el-link></router-link>
 		</div>
 	</div>
@@ -14,8 +14,29 @@
 	export default {
 		data() {
 			return {
-
+				form:{
+					email:'',
+					password:''
+				}
 			}
+			},
+			methods: {
+				login:function(){
+					var data = this.form
+					this.$http.post(('http://localhost:8088/user/login'), data, {
+					  emulateJSON: true
+					}).then(res => {
+						// console.log(this.form)
+						// console.log(res)
+						if(res.body.code == 4031){
+							alert(res.body.message)
+							this.$router.push({path:'/'})
+						}else{
+							alert(res.body.message)
+						}
+					}, res => {
+					});
+				}
 		}
 	}
 </script>

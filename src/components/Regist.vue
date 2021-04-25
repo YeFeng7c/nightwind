@@ -37,8 +37,8 @@
 				this.$http.post(('http://localhost:8088/user/sendEmail'), data, {
 				  emulateJSON: true
 				}).then(res => {
-					console.log(this.form)
-					console.log(res)
+					// console.log(this.form)
+					// console.log(res)
 					if(res.body.code == 4206){
 						alert(res.body.message)
 					}else{
@@ -52,8 +52,8 @@
 				this.$http.post(('http://localhost:8088/user/regist'), data, {
 				  emulateJSON: true
 				}).then(res => {
-					console.log(this.form)
-					console.log(res)
+					// console.log(this.form)
+					// console.log(res)
 					if(res.body.code == 4204){
 						alert(res.body.message)
 					}else{
