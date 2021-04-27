@@ -34,7 +34,7 @@
 		methods: {
 			sendCode:function(){
 				var data = this.form
-				this.$http.post(('http://localhost:8088/user/sendEmail'), data, {
+				this.$http.post(('http://106.14.69.50:8088/user/sendEmail'), data, {
 				  emulateJSON: true
 				}).then(res => {
 					// console.log(this.form)
@@ -49,7 +49,7 @@
 			},
 			regist:function(){
 				var data = this.form
-				this.$http.post(('http://localhost:8088/user/regist'), data, {
+				this.$http.post(('http://106.14.69.50:8088/user/regist'), data, {
 				  emulateJSON: true
 				}).then(res => {
 					// console.log(this.form)
