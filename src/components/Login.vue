@@ -29,10 +29,18 @@
 						// console.log(this.form)
 						// console.log(res)
 						if(res.body.code == 4031){
-							alert(res.body.message)
+             this.$message({
+                    showClose: true,
+                    message: res.body.message,
+                    type: 'success'
+                  });
 							this.$router.push({path:'/'})
 						}else{
-							alert(res.body.message)
+             this.$message({
+                  showClose: true,
+                  message: res.body.message,
+                  type: 'warning'
+                });
 						}
 					}, res => {
 					});

@@ -45,10 +45,18 @@
         }).then(res => {
           // console.log(res.body);
           if (res.body.code == 4000) {
-            alert(res.body.message)
+            this.$message({
+                  showClose: true,
+                  message: res.body.message,
+                  type: 'success'
+                });
               window.location.reload()
           } else {
-            alert(res.body.message)
+             this.$message({
+                  showClose: true,
+                  message: res.body.message,
+                  type: 'warning'
+                });
           }
 
         }, res => {
@@ -56,7 +64,11 @@
         });
       },
       reply:function(){
-        alert("没用")
+         this.$message({
+          showClose: true,
+          message: '没用',
+          type: 'warning'
+        });
       }
     },
     created() {
@@ -88,7 +100,7 @@
     height: 30px;
     color: wheat;
     border: none;
-    /* background-color: orange; */
+    background-color: orange;
   }
   .el-input {
     /* position: absolute; */

@@ -40,9 +40,17 @@
 					// console.log(this.form)
 					// console.log(res)
 					if(res.body.code == 4206){
-						alert(res.body.message)
+						  this.$message({
+                showClose: true,
+                message: res.body.message,
+                type: 'success'
+              });
 					}else{
-						alert(res.body.message)
+             this.$message({
+              showClose: true,
+              message: res.body.message,
+              type: 'warning'
+            });
 					}
 				}, res => {
 				});
@@ -55,9 +63,17 @@
 					// console.log(this.form)
 					// console.log(res)
 					if(res.body.code == 4204){
-						alert(res.body.message)
+						  this.$message({
+                showClose: true,
+                message: res.body.message,
+                type: 'success'
+              });
 					}else{
-						alert(res.body.message)
+             this.$message({
+              showClose: true,
+              message: res.body.message,
+              type: 'warning'
+            });
 					}
 				}, res => {
 
