@@ -4,7 +4,7 @@
 		<div class="navi">
 			<div class="name">
 				<el-menu mode="horizontal" background-color="#E2E7E1" text-color="#000000">
-					<el-menu-item class="item-name">夜の風</el-menu-item>
+					<el-menu-item index="/Login" @click="goTo('/Login')" class="item-name">夜の風</el-menu-item>
 				</el-menu>
 			</div>
 			<div class="menu">
@@ -16,7 +16,7 @@
 				<el-menu-item index="/" @click="goTo('/')">首页</el-menu-item>
 				<el-menu-item index="/Message" @click="goTo('/Message')">留言</el-menu-item>
 				<el-menu-item index="/About" @click="goTo('/About')">关于</el-menu-item>
-				<el-menu-item index="/Regist" @click="goTo('/Regist')">成为会员</el-menu-item>
+				<el-menu-item index="/Regist" @click="goTo('/MyInfo')">成为会员</el-menu-item>
 				<el-menu-item><a href="/sg/sg.html" target="_blank">看你骨骼惊奇，来算一卦</a></el-menu-item>
 				</el-menu>
 			</div>

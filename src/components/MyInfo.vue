@@ -2,10 +2,10 @@
   <div>
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
-	<div class="header">好家伙，你登录成功了</div>
+	<div class="header">个人信息</div>
 	<div class="hello">
-	 <p>名字：{{name}}</p>
-	 <p>邮箱：{{email}}</p>
+	 <p>名字：{{username}}</p>
+	 <p>邮箱：{{useremail}}</p>
 	</div>
   </div>
 </template>
@@ -14,15 +14,30 @@
   export default {
     data() {
       return {
-          name:'',
-          email:''
+          username:'',
+          useremail:'',
+          form:{
+            email:sessionStorage.getItem("email")
+          }
       }
     },
     created() {
-       this.$http.post('http://106.14.69.50:8088/user/findUserByEmail').then(res => {
-          this.name = res.body.data[0].username
-          this.email = res.body.data[0].email
-       })
+     var data = this.form
+      this.$http.post(('http://106.14.69.50:8088/user/findUserByEmail'), data, {
+      emulateJSON: true
+    }).then(res => {
+
+       if(res.body.code == 4202){
+            this.$message({
+              dangerouslyUseHTMLString: true,
+              message: '你还没有登录，点击左上角进行登录'
+            });
+       }
+       this.useremail = res.body.data[0].email
+       this.username = res.body.data[0].username
+
+    }, res => {
+    });
      },
   }
 </script>
