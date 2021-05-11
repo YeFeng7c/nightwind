@@ -46,7 +46,11 @@ export default new Router({
 					name: 'About',
 					 component: ()=>import('@/components/About')
 				},
-				
+       {
+        path: '/MyInfo',
+        name: 'MyInfo',
+        component: ()=>import('@/components/MyInfo')
+        },
 				],
 			}
   ]
