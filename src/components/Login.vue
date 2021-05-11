@@ -34,7 +34,7 @@
                     message: res.body.message,
                     type: 'success'
                   });
-							this.$router.push({path:'/'})
+							this.$router.push({path:'/MyInfo'})
 						}else{
              this.$message({
                   showClose: true,

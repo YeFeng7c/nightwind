@@ -14,13 +14,14 @@
   export default {
     data() {
       return {
-
+          name:'',
+          email:''
       }
     },
     created() {
-       this.$http.post('http://106.14.69.50:8088/message/findUserByEmail').then(res => {
-         // console.log(res)
-         this.list = res.body.data
+       this.$http.post('http://106.14.69.50:8088/user/findUserByEmail').then(res => {
+          this.name = res.body.data[0].username
+          this.email = res.body.data[0].email
        })
      },
   }
