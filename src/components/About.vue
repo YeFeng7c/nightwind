@@ -49,7 +49,7 @@
 
 			showDataTime(){
 				// window.setTimeout("showDataTime()",1000);
-				let BirthDay = new Date("04-15-2021 11:11:11");
+				let BirthDay = new Date("04/15/2021 11:11:11");
 				let today = new Date();
 				let timeOld = (today.getTime() - BirthDay.getTime());
 				let sectimeold = timeOld /1000

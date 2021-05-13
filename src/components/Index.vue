@@ -18,6 +18,7 @@
 				<el-menu-item index="/About" @click="goTo('/About')">关于</el-menu-item>
 				<el-menu-item index="/Regist" @click="goTo('/MyInfo')">成为会员</el-menu-item>
 				<el-menu-item index="/LuckyPage" @click="goTo('/LuckyPage')">来抽个奖</el-menu-item>
+				<el-menu-item><a href="/ds/yefeng.html" target="_blank">打赏</a></el-menu-item>
 				<el-menu-item><a href="/sg/sg.html" target="_blank">看你骨骼惊奇，来算一卦</a></el-menu-item>
 				</el-menu>
 			</div>
@@ -70,4 +71,7 @@
 	.item-name{
 		font-size: 20px;
 	}
+
+	a{text-decoration:none}
+	a:hover{text-decoration:none}
 </style>

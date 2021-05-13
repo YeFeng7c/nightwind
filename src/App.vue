@@ -33,4 +33,9 @@ body{
 .foot{
 	text-align: center;
 }
+	a{
+	text-decoration:none;
+	color:black;
+	}
+	a:hover{text-decoration:none}
 </style>
