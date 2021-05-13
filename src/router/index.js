@@ -51,6 +51,11 @@ export default new Router({
         name: 'MyInfo',
         component: ()=>import('@/components/MyInfo')
         },
+       {
+        path: '/LuckyPage',
+        name: 'LuckyPage',
+        component: ()=>import('@/components/LuckyPage')
+        },
 				],
 			}
   ]

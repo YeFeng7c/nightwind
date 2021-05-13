@@ -4,11 +4,14 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueResource from 'vue-resource'
+import LuckDraw from 'vue-luck-draw'
+
 Vue.config.productionTip = false
 import App from './App'
 import router from './router'
 Vue.use(VueResource)
 Vue.use(ElementUI)
+Vue.use(LuckDraw)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -25,7 +25,9 @@
 			}
 		},
 		created() {
-		
+					setInterval(()=>{
+    				this.showDataTime();
+    			},1000)
 			// this.showDiffDate();
 			  let myDate = new Date()
 			  // console.log(myDate)
@@ -65,9 +67,7 @@
 			}
 		},
 		mounted() {
-			setInterval(()=>{
-				this.showDataTime();
-			},1000)
+
 		},
 		beforeDestroy() {
 			if(this.showDataTime()){

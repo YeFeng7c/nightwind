@@ -17,13 +17,14 @@
 				<el-menu-item index="/Message" @click="goTo('/Message')">留言</el-menu-item>
 				<el-menu-item index="/About" @click="goTo('/About')">关于</el-menu-item>
 				<el-menu-item index="/Regist" @click="goTo('/MyInfo')">成为会员</el-menu-item>
+				<el-menu-item index="/LuckyPage" @click="goTo('/LuckyPage')">来抽个奖</el-menu-item>
 				<el-menu-item><a href="/sg/sg.html" target="_blank">看你骨骼惊奇，来算一卦</a></el-menu-item>
 				</el-menu>
 			</div>
 		</div>
 		</div>
 		<router-view />
-		
+
 	</div>
 </template>
 
@@ -31,14 +32,14 @@
 	export default {
 	  data () {
 	    return {
-	      
+
 	    }
 	  },
 	  methods: {
 	    goTo(path){
 	      this.$router.replace(path)
 	    }
-	  
+
 	  },
 	}
 </script>
