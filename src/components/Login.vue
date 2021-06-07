@@ -35,7 +35,6 @@
                     type: 'success'
                   });
               sessionStorage.setItem("email",this.form.email);
-              console.log(this.form.email)
 							this.$router.push({path:'/MyInfo'})
 						}else{
              this.$message({

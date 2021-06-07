@@ -6,6 +6,7 @@
 				<el-menu mode="horizontal" background-color="#E2E7E1" text-color="#000000">
 					<el-menu-item index="/Login" @click="goTo('/Login')" class="item-name">夜の風</el-menu-item>
 				</el-menu>
+
 			</div>
 			<div class="menu">
 				<el-menu
@@ -54,7 +55,7 @@
 	}
 	.name{
 		display: inline;
-		background-color: red;
+		//background-color: red;
 		width: 100px;
 		font-size: 22px;
 		font-weight: bold;

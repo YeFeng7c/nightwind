@@ -6,7 +6,8 @@
 			<p><el-input placeholder="请输入邮箱" v-model="form.email" clearable class="a-email"></el-input></p>
 			<p>
 				<el-input placeholder="请输入验证码" v-model="form.code" clearable class="a-code"></el-input>
-				<el-button type="info" class="a-sendCode" @click="sendCode();">发送验证码</el-button>
+				<el-button type="info" class="a-sendCode" v-show="show" @click="sendCode();">发送验证码</el-button>
+				<el-button type="info" class="a-sendCode" v-show="!show">{{count}} s</el-button>
 			</p>
 			<p><el-input placeholder="请输入密码" v-model="form.password" show-password class="a-password"></el-input></p>
 			<el-button type="primary" round class="a-regist" @click="regist();">注册</el-button>
@@ -20,6 +21,9 @@
 	export default {
 		data() {
 			return {
+			   show: true,
+         count: '',
+         timer: null,
 				item:{
 					email:'',
 				},
@@ -37,14 +41,26 @@
 				this.$http.post(('http://106.14.69.50:8088/user/sendEmail'), data, {
 				  emulateJSON: true
 				}).then(res => {
-					// console.log(this.form)
-					// console.log(res)
 					if(res.body.code == 4206){
 						  this.$message({
                 showClose: true,
                 message: res.body.message,
                 type: 'success'
               });
+              	  const TIME_COUNT = 60;
+                       if (!this.timer) {
+                         this.count = TIME_COUNT;
+                         this.show = false;
+                         this.timer = setInterval(() => {
+                         if (this.count > 0 && this.count <= TIME_COUNT) {
+                           this.count--;
+                          } else {
+                           this.show = true;
+                           clearInterval(this.timer);
+                           this.timer = null;
+                          }
+                         }, 1000)
+                        }
 					}else{
              this.$message({
               showClose: true,
@@ -60,14 +76,13 @@
 				this.$http.post(('http://106.14.69.50:8088/user/regist'), data, {
 				  emulateJSON: true
 				}).then(res => {
-					// console.log(this.form)
-					// console.log(res)
 					if(res.body.code == 4204){
 						  this.$message({
                 showClose: true,
                 message: res.body.message,
                 type: 'success'
               });
+              this.$router.push({path:'/Login'})
 					}else{
              this.$message({
               showClose: true,

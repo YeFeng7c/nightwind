@@ -3,7 +3,7 @@
 	<div>&nbsp;</div>
 	<div>&nbsp;</div>
 	<div class="hello">
-	 HelloWorld
+	  <img src="../assets/yefeng.png">
 	</div>
   </div>
 </template>
