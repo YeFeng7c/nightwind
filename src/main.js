@@ -5,6 +5,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueResource from 'vue-resource'
 import LuckDraw from 'vue-luck-draw'
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 
 Vue.config.productionTip = false
 import App from './App'
@@ -12,6 +14,7 @@ import router from './router'
 Vue.use(VueResource)
 Vue.use(ElementUI)
 Vue.use(LuckDraw)
+Vue.use(mavonEditor)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

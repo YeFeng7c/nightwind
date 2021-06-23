@@ -238,7 +238,7 @@
     /* background-color: red; */
 	  height: 300px;
 		width: 600px;
-		margin-top: 100px;
+		margin-top: 150px;
 		margin-left: 30%;
     /* margin: 30% 20% 30% 30%; */
   }

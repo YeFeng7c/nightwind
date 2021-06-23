@@ -20,7 +20,7 @@
 
 <style scoped>
 .hello{
-	margin-top: 20%;
+	margin-top: 150px;
 	text-align: center;
 	font-size: 32px;
 	font-weight: bold;

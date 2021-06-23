@@ -2,8 +2,8 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
  <div id="v-content" v-bind:style="{minHeight: Height+'px'}"> <router-view/></div>
-  <footer class="foot"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021004731号</a></footer>
-  </div>
+    <footer class="foot"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021004731号</a></footer>
+ </div>
 </template>
 
 <script>

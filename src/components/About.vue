@@ -80,7 +80,7 @@
 <style scoped>
 	.aa {
 		/* background-color: red; */
-		margin-top: 20%;
+		margin-top: 150px;
 		text-align: center;
 	}
 

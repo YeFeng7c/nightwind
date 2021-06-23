@@ -15,8 +15,10 @@
 				text-color="#000000"
 				>
 				<el-menu-item index="/" @click="goTo('/')">首页</el-menu-item>
+				<el-menu-item><a href="http://yefeng.link/dist" target="_blank">博客</a></el-menu-item>
 				<el-menu-item index="/Message" @click="goTo('/Message')">留言</el-menu-item>
 				<el-menu-item index="/About" @click="goTo('/About')">关于</el-menu-item>
+				<el-menu-item index="/EditorIndex" @click="goTo('/EditorIndex')">写点文章</el-menu-item>
 				<el-menu-item index="/Regist" @click="goTo('/MyInfo')">成为会员</el-menu-item>
 				<el-menu-item index="/LuckyPage" @click="goTo('/LuckyPage')">来抽个奖</el-menu-item>
 				<el-menu-item><a href="/ds/yefeng.html" target="_blank">打赏</a></el-menu-item>

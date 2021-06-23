@@ -56,6 +56,11 @@ export default new Router({
         name: 'LuckyPage',
         component: ()=>import('@/components/LuckyPage')
         },
+       {
+        path: '/EditorIndex',
+        name: 'EditorIndex',
+        component: ()=>import('@/components/EditorIndex')
+        },
 				],
 			}
   ]

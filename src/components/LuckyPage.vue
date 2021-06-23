@@ -121,6 +121,7 @@ export default {
 .lucky{
   //background-color: orange;
   //position:relative;
+  margin-top: 150px;
 }
 .luckygrid{
   margin: auto;
